@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>大片~大人看的片~</title>
+  <style>
+    body {
+      background-image: url('https://picsum.photos/1920/1080');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+    .container {
+      padding: 50px;
+      margin: auto;
+      max-width: 960px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
+      letter-spacing: 5px;
+    }
+    video {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.9);
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 50px auto;
+    }
+    .button {
+      display: inline-block;
+      background-color: #45a049;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #3e8e41;
+      transform: translateY(-3px);
+    }
+    .button:active {
+      background-color: #3e8e41;
+      transform: translateY(0px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>拍照水平正在进步，不懂别批评</h1>
+    <video id="myVideo" controls></video>
+    <p>想要观看更多，你得花点</p>
+    <a href="#" class="button" onclick="playRandomVideo()">一次一块</a>
+  </div>
+
+  <script>
+    const videos = [
+      "xxx.mp4",
+      "xxx1.mp4",
+      "xxx2.mp4",
+      "xxx3.mp4",
+      "xxx4.mp4",
+      "xxx5.mp4"
+    ];
+
+    function playRandomVideo() {
+      const video = document.getElementById('myVideo');
+      
+      // 随机选择视频
+      const randomIndex = Math.floor(Math.random() * videos.length);
+      const randomVideo = videos[randomIndex];
+
+      // 修改视频元素的源
+      video.src = randomVideo;
+      video.play();
+    }
+  </script>
+</body>
+</html>

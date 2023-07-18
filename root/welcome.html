@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WebServer</title>
+  <style>
+    body {
+      background-image: url('https://picsum.photos/1920/1080');
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+    .container {
+      padding: 50px;
+      margin: auto;
+      max-width: 960px;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 4rem;
+      text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
+      margin-bottom: 30px;
+    }
+    form {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    button {
+      display: inline-block;
+      background-color: #45a049;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
+    }
+    button:hover {
+      background-color: #3e8e41;
+      transform: translateY(-3px);
+    }
+    button:active {
+      background-color: #3e8e41;
+      transform: translateY(0px);
+    }
+    .animated {
+      animation-duration: 3s;
+      animation-fill-mode: both;
+    }
+    .fadeOut {
+      animation-name: fadeOut;
+    }
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="animated fadeOut">海量资源，应有尽有</h1>
+    <form action="5" method="post">
+      <button type="submit">xxx.jpg</button>
+    </form>
+    <form action="6" method="post">
+      <button type="submit">xxx.mp4</button>
+    </form>
+    <form action="7" method="post">
+      <button type="submit">万水千山总是情，加个好友行不行</button>
+    </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('.animated').each(function() {
+        var delay = $(this).index() * 500;
+        $(this).delay(delay).queue(function(){
+          $(this).removeClass('fadeOut').dequeue();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

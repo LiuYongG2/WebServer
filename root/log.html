@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="log.css">
+    <meta charset="UTF-8">
+    <title>Sign in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 50px;
+        }
+        
+        .login {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>登录</h1>
+    <div class="login">
+        <form action="2CGISQL.cgi" method="post">
+            <div><input type="text" name="user" placeholder="用户名" required="required"></div><br/>
+            <div><input type="password" name="password" placeholder="登录密码" required="required"></div><br/>
+            <div><button type="submit">确定</button></div>
+        </form>
+    </div>
+</body>
+</html>
